@@ -1,0 +1,291 @@
+/* Navbar Styles */
+.game-navbar {
+  background: #10002b;
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+/* Logo */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+}
+
+.game-text {
+  color: #ff3e9d;
+  margin-right: 5px;
+}
+
+.zone-text {
+  color: #00ccff;
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-item {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+  position: relative;
+  padding: 5px 0;
+}
+
+.nav-item:hover {
+  color: #00ccff;
+}
+
+.nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #ff3e9d, #00ccff);
+  transition: width 0.3s ease;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
+
+/* Login Button */
+.login-btn {
+  background: linear-gradient(90deg, #ff3e9d, #7b2ff7);
+  color: white;
+  padding: 10px 25px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  border: none;
+  font-weight: 600;
+}
+
+.login-btn:hover {
+  background: linear-gradient(90deg, #ff3e9d, #ff3e9d);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 62, 157, 0.4);
+  color: white;
+}
+
+.login-btn::after {
+  display: none;
+}
+
+/*  */
+/* Navbar styles */
+/* Navbar styles */
+.game-navbar {
+  background-color: #333;
+  padding: 10px;
+  color: #fff;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.user-dropdown {
+  position: relative;
+}
+
+.dropdown-btn {
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: #444;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  width: 200px;
+  display: none; /* Hidden by default */
+  z-index: 10; /* Ensure the dropdown is on top */
+}
+
+.user-dropdown:hover .dropdown-menu {
+  display: block; /* Show on hover */
+}
+
+.dropdown-item {
+  color: white;
+  text-decoration: none;
+  padding: 8px 20px;
+  display: block;
+}
+
+.dropdown-item:hover {
+  background-color: #555;
+}
+
+.login-btn {
+  background-color: #007bff;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.login-btn:hover {
+  background-color: #0056b3;
+}
+
+
+/* Navbar styles */
+.game-navbar {
+  background-color: #333;
+  padding: 10px;
+  color: #fff;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.user-dropdown {
+  position: relative;
+  display: inline-block;
+  border-radius: 30px;
+}
+
+.dropdown-btn {
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: #444;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  width: 200px;
+  display: block; /* Dropdown is always visible if `dropdownOpen` is true */
+  z-index: 10; /* Ensure the dropdown is on top */
+}
+
+.dropdown-item {
+  color: white;
+  text-decoration: none;
+  padding: 8px 20px;
+  display: block;
+}
+
+.dropdown-item:hover {
+  background-color: #555;
+}
+
+.login-btn {
+  background-color: #007bff;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.login-btn:hover {
+  background-color: #0056b3;
+}
+
+
+/* Responsive Navbar */
+@media (max-width: 992px) {
+  .navbar-container {
+    padding: 0 20px;
+  }
+  
+  .nav-links {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 15px;
+  }
+  
+  .nav-item {
+    font-size: 0.9rem;
+  }
+  
+  .login-btn {
+    padding: 8px 15px;
+  }
+  
+  .logo-text {
+    font-size: 1.3rem;
+  }
+}
+  

@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +12,406 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/* Google Fonts already imported in index.html */
+
+:root {
+  --primary: #ff2a6d;
+  --primary-light: #ffe5ee;
+  --primary-dark: #c80049;
+
+  --secondary: #05d9e8;
+  --secondary-light: #c7f9fd;
+  --secondary-dark: #04b8c5;
+
+  --accent: #ffd700;
+  --accent-light: #fffae5;
+  --accent-dark: #d9b800;
+
+  --dark: #131a2b;
+  --dark-light: #242d3e;
+  --dark-lighter: #39455e;
+  --dark-lightest: #4d5e7f;
+
+  --success: #28a745;
+  --danger: #dc3545;
+  --warning: #ffc107;
+  --info: #17a2b8;
+}
+
+body {
+  background-color: var(--dark);
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+/* Custom button styles */
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+  color: var(--dark);
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-dark);
+  border-color: var(--secondary-dark);
+  color: var(--dark);
+}
+
+.btn-accent {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: var(--dark);
+}
+
+.btn-accent:hover {
+  background-color: var(--accent-dark);
+  border-color: var(--accent-dark);
+  color: var(--dark);
+}
+
+.btn-outline-light {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+/* Add these styles to ensure buttons are properly visible and clickable */
+
+.btn-outline-secondary {
+  border-color: var(--secondary);
+  color: var(--secondary);
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--secondary);
+  color: var(--dark);
+}
+
+.btn-outline-warning {
+  border-color: var(--warning);
+  color: var(--warning);
+}
+
+.btn-outline-warning:hover {
+  background-color: var(--warning);
+  color: var(--dark);
+}
+
+.btn-outline-success {
+  border-color: var(--success);
+  color: var(--success);
+}
+
+.btn-outline-success:hover {
+  background-color: var(--success);
+  color: var(--dark);
+}
+
+.btn-outline-danger {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+.btn-outline-danger:hover {
+  background-color: var(--danger);
+  color: var(--dark);
+}
+
+/* Custom card styles */
+.card {
+  background-color: rgba(19, 26, 43, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+}
+
+.glass-card {
+  background-color: rgba(19, 26, 43, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+}
+
+/* Custom form styles */
+.form-control,
+.form-select {
+  background-color: var(--dark-lighter);
+  border: 1px solid var(--dark-lightest);
+  color: #fff;
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: var(--dark-lighter);
+  border-color: var(--primary);
+  color: #fff;
+  box-shadow: 0 0 0 0.25rem rgba(255, 42, 109, 0.25);
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Custom badge styles */
+.badge-success {
+  background-color: rgba(40, 167, 69, 0.2);
+  color: #4cd964;
+}
+
+.badge-warning {
+  background-color: rgba(255, 193, 7, 0.2);
+  color: #ffcc00;
+}
+
+.badge-danger {
+  background-color: rgba(220, 53, 69, 0.2);
+  color: #ff3b30;
+}
+
+.badge-info {
+  background-color: rgba(23, 162, 184, 0.2);
+  color: #5ac8fa;
+}
+
+.badge-primary {
+  background-color: rgba(255, 42, 109, 0.2);
+  color: #ff6399;
+}
+
+.badge-secondary {
+  background-color: rgba(5, 217, 232, 0.2);
+  color: #39e7f7;
+}
+
+/* Neon border effect */
+.neon-border {
+  border: 1px solid transparent;
+  position: relative;
+}
+
+.neon-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 42, 109, 0.5);
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+/* Sidebar styles */
+.sidebar {
+  background-color: rgba(19, 26, 43, 0.9);
+  backdrop-filter: blur(10px);
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+}
+
+.sidebar-link.active {
+  background-color: rgba(255, 42, 109, 0.2);
+  color: var(--primary);
+}
+
+.sidebar-link:not(.active):hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Table styles */
+.table {
+  color: #fff;
+}
+
+.table thead {
+  background-color: var(--dark-lighter);
+}
+
+.table tbody {
+  background-color: rgba(19, 26, 43, 0.6);
+}
+
+.table th {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.table td,
+.table th {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--dark-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--dark-lightest);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--dark-lightest);
+}
+
+/* Animations */
+.fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 42, 109, 0.5), 0 0 10px rgba(5, 217, 232, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 42, 109, 0.8), 0 0 20px rgba(5, 217, 232, 0.4);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Animation classes */
+.animate-glow {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Modal styles */
+.modal-content {
+  background-color: var(--dark-light);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.modal-header {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.modal-footer {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Ensure modals are properly displayed */
+.modal {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-backdrop {
+  z-index: 1040;
+}
+
+.modal-content {
+  z-index: 1050;
+}
+
+/* Offcanvas styles */
+.offcanvas {
+  background-color: var(--dark-light);
+  color: #fff;
+}
+
+/* Spinner */
+.spinner-border {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Fix for offcanvas */
+.offcanvas-start {
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.offcanvas-backdrop {
+  background-color: rgba(19, 26, 43, 0.5);
+}
+
+/* Ensure action buttons are clearly visible */
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: 0.2rem;
+}
+
+/* Add focus styles for better accessibility */
+.btn:focus,
+.form-control:focus,
+.form-select:focus {
+  box-shadow: 0 0 0 0.25rem rgba(255, 42, 109, 0.25);
+  outline: none;
+}
+
+/* Ensure the main content adjusts when sidebar is open */
+@media (min-width: 992px) {
+  .main-content-with-sidebar {
+    margin-left: 16rem;
+    transition: margin-left 0.3s ease;
+  }
+}
+
+
+
+
+

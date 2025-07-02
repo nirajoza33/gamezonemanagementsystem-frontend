@@ -55,9 +55,11 @@ export const getUserInfo = () => {
     console.log("username in jwt : ",parsedUser.UserName)
     // Ensure the username exists in the token and return it
     const username = parsedUser.UserName || "User";  // Default to "User" if no username found
+    const status = parsedUser.status || "false";
     return {
       ...parsedUser,
       username,  // Add username field
+      status,
     };
   }
   return null;

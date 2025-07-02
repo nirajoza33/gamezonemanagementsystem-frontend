@@ -1,45 +1,133 @@
-import React from "react";
-import "../css/Home.css";
-import { Link } from "react-router-dom";
-import homeImg from "../images/home.jpg";
-import ResetPassword from "./ResetPassword";
-import Navbar from "./Navbar";
+// import React from 'react';
+// import '../css/Home.css';
+// import { Carousel } from 'react-bootstrap';
+// import Navbar from '../Components/Navbar';
+// import AttractionsSection from './AttractionsSection';
+// import Footer from './Footer';
+// import Chatbot from './ChatBot';
 
-const Home = () => {
+// const HomePage = () => {
+//   return (
+//     <>
+//       <Navbar/>
+//       <div className="homepage">
+//         <Carousel fade interval={5000}>
+//           <Carousel.Item>
+//             <img
+//               className="d-block w-100"
+//               src="/assets/gaming-illustration.jpg"
+//               alt="First slide"
+//             />
+//             <Carousel.Caption>
+//               <div className="carousel-caption-text">
+//                 <h1>Welcome to <span className="highlight">GameZone Club</span></h1>
+//                 <p>Play. Compete. Win. Join the ultimate gaming experience today!</p>
+//                 <a href="/registration" className="btn btn-warning btn-lg mt-3">Get Started</a>
+//               </div>
+//             </Carousel.Caption>
+//           </Carousel.Item>
+//           <Carousel.Item>
+//             <img
+//               className="d-block w-100"
+//               src="/assets/gaming-illustration2.jpg"
+//               alt="Second slide"
+//             />
+//             <Carousel.Caption>
+//               <div className="carousel-caption-text">
+//                 <h1>Join the Battle</h1>
+//                 <p>Challenge other players in exciting gaming tournaments!</p>
+//                 <a href="/signup" className="btn btn-warning btn-lg mt-3">Get Started</a>
+//               </div>
+//             </Carousel.Caption>
+//           </Carousel.Item>
+//           <Carousel.Item>
+//             <img
+//               className="d-block w-100"
+//               src="/assets/gaming-illustration3.jpg"
+//               alt="Third slide"
+//             />
+//             <Carousel.Caption>
+//               <div className="carousel-caption-text">
+//                 <h1>Become a Legend</h1>
+//                 <p>Achieve greatness and unlock exclusive rewards!</p>
+//                 <a href="/signup" className="btn btn-warning btn-lg mt-3">Get Started</a>
+//               </div>
+//             </Carousel.Caption>
+//           </Carousel.Item>
+//         </Carousel>
+//       </div>
+//       <AttractionsSection/>
+//       <Footer/>
+//     </>
+//   );
+// };  
+
+// export default HomePage;
+
+
+import React from 'react';
+import '../css/Home.css';
+import { Carousel } from 'react-bootstrap';
+import Navbar from '../Components/Navbar';
+import AttractionsSection from './AttractionsSection';
+import Footer from './Footer';
+import Chatbot from './ChatBot';
+
+const HomePage = () => {
   return (
     <>
-    <Navbar/>
-    <div className="game-home-container">
-      {/* Hero Section with Background */}
-      <div className="hero-section">
-        <div className="hero-content">
-          <h1 className="hero-title">
-            <span className="legend-text">LEGEND</span><br />
-            <span className="never-text">NEVER</span><br />
-            <span className="giveup-text">GIVE-UP</span>
-          </h1>
-        </div>
-        <div className="hero-image-container">
-          {/* Character image will be added via CSS */}
-        </div>
+      <Navbar/>
+      <div className="homepage">
+        <Carousel fade interval={5000}>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src="/assets/gaming-illustration.jpg"
+              alt="First slide"
+            />
+            <Carousel.Caption>
+              <div className="carousel-caption-text">
+                <h1>Welcome to <span className="highlight">GameZone Club</span></h1>
+                <p>Play. Compete. Win. Join the ultimate gaming experience today!</p>
+                <a href="/registration" className="btn btn-warning btn-lg mt-3">Get Started</a>
+              </div>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src="/assets/gaming-illustration2.jpg"
+              alt="Second slide"
+            />
+            <Carousel.Caption>
+              <div className="carousel-caption-text">
+                <h1>Join the Battle</h1>
+                <p>Challenge other players in exciting gaming tournaments!</p>
+                <a href="/signup" className="btn btn-warning btn-lg mt-3">Get Started</a>
+              </div>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src="/assets/gaming-illustration3.jpg"
+              alt="Third slide"
+            />
+            <Carousel.Caption>
+              <div className="carousel-caption-text">
+                <h1>Become a Legend</h1>
+                <p>Achieve greatness and unlock exclusive rewards!</p>
+                <a href="/signup" className="btn btn-warning btn-lg mt-3">Get Started</a>
+              </div>
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
       </div>
-
-
-      
-      {/* Footer */}
-      <footer className="game-footer">
-        <div className="footer-content">
-          <p>© 2023 Game Zone | All Rights Reserved</p>
-          <div className="footer-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Contact Us</a>
-          </div>
-        </div>
-      </footer>
-    </div>
+      <AttractionsSection/>
+      <Chatbot/> {/* Positioned before Footer to ensure proper stacking */}
+      <Footer/>
     </>
   );
-};
+};  
 
-export default Home;
+export default HomePage;

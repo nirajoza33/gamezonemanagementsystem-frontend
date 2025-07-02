@@ -1,0 +1,143 @@
+/* View Profile Specific Styles */
+
+/* Error and Success States */
+.error-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+}
+
+.error-content {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+}
+
+.error-content h3 {
+  color: #ef4444;
+  margin-bottom: 1rem;
+}
+
+.error-content p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.success-notification {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  background: rgba(76, 217, 100, 0.1);
+  border: 1px solid rgba(76, 217, 100, 0.3);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  backdrop-filter: blur(20px);
+  z-index: 1001;
+  animation: slideInRight 0.3s ease-out;
+}
+
+.success-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #4cd964;
+  font-weight: 600;
+}
+
+.success-icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Logout Button Styling */
+.logout-btn {
+  background: linear-gradient(135deg, #ef4444, #dc2626) !important;
+  color: #ffffff !important;
+}
+
+.logout-btn:hover {
+  background: linear-gradient(135deg, #dc2626, #b91c1c) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(239, 68, 68, 0.4);
+}
+
+/* Role Badge Variations */
+.role-admin {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.role-owner {
+  background: rgba(255, 215, 0, 0.2);
+  color: #ffd700;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.role-user {
+  background: rgba(59, 130, 246, 0.2);
+  color: #3b82f6;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+/* Enhanced Profile Layout */
+.profile-header {
+  margin-bottom: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .success-notification {
+    top: 1rem;
+    right: 1rem;
+    left: 1rem;
+  }
+
+  .panel-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .panel-header > div:last-child {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .panel-action {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .panel-header > div:last-child {
+    flex-direction: column;
+  }
+
+  .success-notification {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    margin: 1rem 0;
+  }
+}
